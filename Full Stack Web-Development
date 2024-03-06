@@ -1,2 +1,84 @@
 # git-codes
 new codes
+---------->Setup and Config<----------------
+To check Git version --->git --version
+To add username globally --->git config --global user.name "[name]"
+To add user email globally --->git config --global user.email "[emailaddress]"
+To set repository-specific username --->git config user.name "[name]"
+To set repository-specific email --->git config user.email "[email]"
+To check the status of git --->git status
+
+------------------>Create Repositories<---------------------
+To initialize Git repository --->git init
+To clone Git repository --->git clone [url]
+
+-------------------->Make Changes <-------------------------
+To add all the files to the staging area --->git add.
+To add a specific file/folder to the staging area --->git add [file/folder name]
+To commit changes in git --->git commit -m "[Your Message for this commit]"
+To get the list of version history --->git log
+Version history in one line --->git log – oneline
+To check differences between two files --->git diff [file1] [file2]
+To check differences between two branches --->git diff [branch1] [branch2]
+To check changes of a commit --->git show [commit id]
+
+---------------------->Branches<----------------------
+To get a list of branches --->git branch [option]option:
+--all
+To check the current branch --->git branch
+To create a new branch --->git branch [branch name]
+git checkout -b [branch name]
+To change the branch --->git switch [branch name]
+git checkout [branch name]
+To delete specific branch --->git branch -d [branch name]
+
+------------------>Merge, Rebase, and Cherry-Pick<------------------
+To merge two branches --->git merge -m "[merge message]" [branch]
+To rebase two branches --->git rebase [branch]
+To get a specific commit from a branch to the current branch and head point to it --->git cherry-pick [commit]
+
+--------------------->Reset and Revert<-------------------------
+To go back to the previous commit by destroying others in between commits
+--->git reset [commit]
+To go back to the previous commit by putting the previous commit to the latest commit --->git revert [commit] 
+
+----------------->Stash<---------------------
+>>To save the changes without committing them --->git stash
+>>To show the changes recorded in the stash --->git stash show
+>>To bring the changes back and remove them from the stash list --->git stash pop
+>>To bring the changes back and not removed from the stash list --->git stash apply
+>>To remove the stash entries --->git stash [option]
+option:
+drop – to remove a single entry
+clear – to remove all the entries
+
+---------------------->Git and GitHub<------------------------
+>>To clone GitHub repository --->git clone [url]
+>>To add GitHub remote repository --->git remote add [expression] [option] [url]
+expression:
+origin
+upstream
+staging
+options:
+add – to add a repository
+remove – to remove a repository 
+>>To fetch branches and/or tags from other repositories
+--->git fetch [option]
+option:
+--all – to fetch all the branch
+--prune – to remove any remote-tracking
+references that no longer exist on the remote
+>>To push the changes to the remote repository --->git push [option] [branch]
+options:
+origin - specific tag branch
+--all - push all branches
+>>To get (pull) changes from a remote repository into the current branch --->git pull [options] [branch]
+options:
+-r – rebase the current branch on top of the upstream branch
+--no-rebase – will not perform rebase
+
+------------------------>Git ignore<-------------------------
+>>To un-track the files in git --->touch .gitignore
+add line-by-line file/folder path in the
+.gitignore file to un-track from git.
+
